@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    padding: 20px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+header .container .logo img{
+    width: 150px;
+    height: 80px;
+}
+header .container .navLinks nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+header .container .navLinks nav ul li{
+    font-size: 16px;
+    margin-right: 40px;
+}
+header .container .navLinks nav ul li a{
+    text-decoration: none;
+}
+header .container .navLinks nav ul li a:hover{
+    color: #d52b1e;
+    transition-duration: 0.3s;
+}
+
+footer {
+    background-color: #86312a;
+    padding: 38px;
+}
+footer .container ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+footer .container ul li.logo img {
+    width: 150px;
+    height: 80px;
+}
+footer .container li ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 16px;
+}
+footer .container ul li a {
+    text-decoration: none;
+    color: #d9dad8;
+}
+footer .container ul li a:hover {
+    color: #fff;
+    transition-duration: 0.3s;
+}
+footer .container ul li.thcolumn p{
+    color: #d9dad8;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+footer .container ul li.thcolumn ul{
+    flex-direction: row;
+    padding: 0;
+}
+footer .container ul li.thcolumn ul svg {
+    color: #d52b1e;
+}
+footer .container ul li.thcolumn ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9dad8;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+footer .container ul li.visa img {
+    width: 50px;
+    height: auto;
+}
+footer .copyright{
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .copyright p{
+    color: #d9dad8;
+    font-size: 14px;
+}
+footer .copyright a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #d9dad8;
+}
+footer .copyright a:hover{
+    color: #fff;
+    transition-duration: 0.2s;
+}
