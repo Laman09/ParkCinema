@@ -1,0 +1,39 @@
+.list{
+    background-color: #373737;
+    padding: 20px 16px;
+}
+.list .headings #movies{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.list .headings #movies li{
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 0 14px #fff;
+}
+.list .headings #movies li a{
+    color: #d9dad8;
+    display: inline-block;
+    text-decoration: none;
+}
+.list .headings #schedule{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+.list .headings #schedule li{
+    font-size: 18px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    opacity: 100;
+    color: #d9dad8;
+}
