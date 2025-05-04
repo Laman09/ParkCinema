@@ -1,11 +1,44 @@
 import React from 'react'
 import { Outlet, Link } from "react-router-dom"
 import "./Layout.css"
+// import { useEffect, useState } from "react";
+
+// const backgroundImages = [
+//   "url(https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F1744886126249_1744886126249_minecraft__sayt_banner.png&w=3840&q=75)",
+//   "url('https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F1744885620693_1744885620693_belkede_sayt_banner.png&w=3840&q=75')",
+//   "url('https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F1744884456470_1744884456469_tagiyev__sayt_banner.png&w=3840&q=75')",
+//   "url('https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F1744883815570_1744883815569_wolt_post_sayt_banner.png&w=3840&q=75')",
+// ];
 
 const Layout = () => {
+    // const [index, setIndex] = useState(0);
+
+    // useEffect(() => {
+    //     const savedIndex = localStorage.getItem("bgIndex");
+    //     if (savedIndex !== null) {
+    //         setIndex(parseInt(savedIndex, 10));
+    //     }
+    // }, []);
+
+    // useEffect(() => {
+    //     localStorage.setItem("bgIndex", index.toString());
+    // }, [index]);
+
+    // const nextImage = () => {
+    //     setIndex((prev) => (prev + 1) % backgroundImages.length);
+    // };
     return(
         <>
             <header>
+                <div className="backgroundImages">
+                    {/* <button
+                        onClick={nextImage}
+                        className="bg-white/70 text-xl p-3 rounded-full shadow hover:bg-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+	                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 5l6 7l-6 7" />
+                        </svg>
+                    </button> */}
+                </div>
                 <div className="container">
                     <div className="logo">
                         <a href="/az">
