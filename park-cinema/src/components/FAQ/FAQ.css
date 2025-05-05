@@ -24,7 +24,7 @@
 }
 .faq .container .questions .question{
     cursor: pointer;
-    border-bottom: 1px solid #d9dad8;
+    border-bottom: 1px solid #d9dadb;
     padding-bottom: 10px;
     width: 650px;
 }
@@ -62,6 +62,6 @@
     transition-duration: 0.3s;
 }
 .faq .container .questions .question .answer p{
-    color: #d9dad8;
+    color: #d9dadb;
     font-size: 15px;
 }
