@@ -4,33 +4,36 @@
     box-sizing: border-box;
 }
 .signIn .container{
-    padding: 32px 0 80px;
+    padding: 20px 0 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #373737;
 }
 .signIn .container .heading h1{
-    font-size: 30px;
+    font-size: 35px;
     color: #d9dadb;
-    padding: 30px;
-    font-weight: 600;
+    padding: 40px;
+    font-weight: 500;
 }
 .signIn .container .inputBar{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 60px 0 120px;
 }
 .signIn .container .inputBar .inputs{
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding: 40px;
 }
 .signIn .container .inputBar .inputs .email input{
     border: none;
     border-bottom: 1px solid #d9dadb;
     outline: none;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     background-color: transparent;
     padding: 10px;
     width: 700px;
@@ -42,7 +45,7 @@
     color: white;
     background-color: transparent;
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
     width: 700px;
 }
 .signIn .container .inputBar .inputs .password a{
@@ -55,6 +58,7 @@
 }
 .signIn .container .inputBar .button{
     padding-top: 30px;
+    margin-left: 40px;
 }
 .signIn .container .inputBar .button button{
     display: flex;

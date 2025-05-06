@@ -8,11 +8,11 @@
     justify-content: space-around;
     text-align: center;
     gap: 10px;
-    padding-bottom: 10px;
+    padding: 30px;
 }
 .list .headings #movies li{
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     text-shadow: 0 0 14px #fff;
@@ -27,13 +27,122 @@
     align-items: center;
     gap: 20px;
     list-style: none;
+    padding: 50px;
 }
 .list .headings #schedule li{
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition-duration: 0.3s;
     text-decoration: underline;
     text-underline-offset: 6px;
     opacity: 100;
     color: #d9dadb;
+}
+
+/* selections */
+.list .selections{
+    position: relative;
+    width: 700px;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* language */
+.list .selections .selectedLanguage{
+    cursor: pointer;
+    padding: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.list .selections .selectedLanguage:hover{
+    border-bottom: 2px solid #ff5c5c;
+}
+.list .selections .selectedLanguage .arrow{
+    margin-left: 5px;
+    text-align: right;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.list .selections .selectedLanguage .up svg{
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list .selections .dropdownLanguage {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #999;
+    z-index: 10;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.list .selections .dropdownLanguage .dropdown-header {
+    padding: 10px;
+    font-style: italic;
+    color: #ccc;
+    background-color: #7777773d;
+}
+.list .selections .dropdownLanguage .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+.dropdown-item:hover {
+  background-color: #66666638;
+}
+
+/* cinema */
+.selectedCinema{
+    cursor: pointer;
+    padding: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.selectedCinema:hover{
+    border-bottom: 2px solid #ff5c5c;
+}
+.selectedCinema .arrow{
+    margin-left: 5px;
+    text-align: right;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.selectedCinema .up svg{
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdownCinema {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #999;
+    z-index: 10;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.dropdownCinema .dropdown-header {
+    padding: 10px;
+    font-style: italic;
+    color: #ccc;
+    background-color: #7777773d;
+}
+.dropdownCinema .dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    color: white;
 }
