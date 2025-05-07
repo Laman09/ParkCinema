@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import "./Home.css";
+import { TextField, Box } from '@mui/material';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Movies from './Movies/Movies';
+import dayjs from 'dayjs';
 
 const Home = () => {
   const [languageOpen, setLanguageOpen] = useState(false);
@@ -11,6 +16,8 @@ const Home = () => {
 
   const languages = ["AZ", "TR", "RU", "EN"];
   const cinemas = ["Park Bulvar", "Metro Park", "Flame Towers", "Sevinc Mall", "Shahdag"];
+
+  const [selectedDate, setSelectedDate] = useState(dayjs());
 
   const handleLanguageSelect = (lang) => {
     setLanguage(lang);
@@ -83,6 +90,23 @@ const Home = () => {
             ))}
           </div>
         )}
+
+        <Box className="date-picker-container">
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker
+              value={selectedDate}
+              onChange={(newValue) => setSelectedDate(newValue)}
+              format="DD-MM-YYYY"
+              slotProps={{
+                textField: {
+                variant: 'standard',
+                placeholder: 'DD-MM-YYYY',
+                InputProps: { disableUnderline: true },
+                },
+              }}
+            />
+          </LocalizationProvider>
+        </Box>
       </div>
 
       <div className="movies">

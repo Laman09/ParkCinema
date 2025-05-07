@@ -42,7 +42,7 @@
 /* selections */
 .list .selections{
     position: relative;
-    width: 700px;
+    /* width: 700px; */
     color: white;
     padding: 0 20px;
     display: flex;
@@ -56,7 +56,8 @@
     padding: 10px;
     font-style: italic;
     display: flex;
-    justify-content: space-between;
+    width: 400px;
+    justify-content: center;
     align-items: center;
     border-bottom: 2px solid white;
 }
@@ -78,7 +79,7 @@
 .list .selections .dropdownLanguage {
     position: absolute;
     top: 100%;
-    width: 100%;
+    width: 400px;
     background-color: #999;
     z-index: 10;
     text-align: left;
@@ -106,6 +107,7 @@
     padding: 10px;
     font-style: italic;
     display: flex;
+    width: 400px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid white;
@@ -128,7 +130,7 @@
 .dropdownCinema {
     position: absolute;
     top: 100%;
-    width: 100%;
+    width: 400px;
     background-color: #999;
     z-index: 10;
     text-align: left;
@@ -144,5 +146,43 @@
 .dropdownCinema .dropdown-item {
     padding: 10px;
     cursor: pointer;
+    color: white;
+}
+
+/* calendar */
+.date-picker-container {
+    cursor: pointer;
+    padding: 10px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.date-picker-container:hover{
+    border-bottom: 2px solid #ff5c5c;
+}
+.MuiInputBase-root {
+    color: white;
+    font-size: 26px;
+} 
+.MuiInputBase-input::placeholder {
+    color: white;
+}
+.MuiPickersDay-root.Mui-selected {
+    background-color: #ff5c5c !important;
+    color: white;
+}
+.MuiCalendarPicker-root {
+    background-color: white;
+    border-radius: 8px;
+} 
+.MuiPickersPopper-root {
+    z-index: 1300;
+}
+svg{
+    color: #ff5c5c;
+}
+span{
     color: white;
 }
