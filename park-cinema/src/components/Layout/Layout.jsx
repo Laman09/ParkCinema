@@ -1,21 +1,10 @@
-import React from 'react'
 import { Outlet, Link } from "react-router-dom"
 import "./Layout.css"
 
-const Layout = () => {
-
+const Layout = () => {    
     return(
         <>
             <header>
-                <div className="backgroundImages">
-                    {/* <button
-                        onClick={nextImage}
-                        className="bg-white/70 text-xl p-3 rounded-full shadow hover:bg-white transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-	                        <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 5l6 7l-6 7" />
-                        </svg>
-                    </button> */}
-                </div>
                 <div className="container">
                     <div className="logo">
                         <a href="/az">
@@ -43,10 +32,11 @@ const Layout = () => {
                             </ul>
                         </nav>
                     </div>
-                </div>
-                
+                </div>  
             </header>
+
             <Outlet />
+            
             <footer>
                 <div className="container">
                     <ul>

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Selections.css'
+import { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
 import { useSelection } from '../../../contexts/SelectionsContext';
 import { Box } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -13,9 +15,17 @@ function Selections({ languages, cinemas }) {
     selectedDate, setSelectedDate, resetSelections
   } = useSelection();
 
+  const [clearButton, setClearButton] = useState(false);
+
+  useEffect(() => {
+    const isDefault = language === "Dil" && cinema === "Kinoteatr" && selectedDate.isSame(dayjs(), 'day');
+    setClearButton(!isDefault);
+  }, [language, cinema, selectedDate]);
+
   return (
     <div className="selections">
-      {/* Language */}
+
+      {/* Language Picker*/}
       <div className="dropdown-wrapper">
         <div className="selectedLanguage" onClick={() => {
           setLanguageOpen(!languageOpen);
@@ -40,7 +50,7 @@ function Selections({ languages, cinemas }) {
         )}
       </div>
 
-      {/* Cinema */}
+      {/* Cinema Picker*/}
       <div className="dropdown-wrapper">
         <div className="selectedCinema" onClick={() => {
           setCinemaOpen(!cinemaOpen);
@@ -82,8 +92,11 @@ function Selections({ languages, cinemas }) {
           />
         </LocalizationProvider>
       </Box>
-
-      <button className="clear-button" onClick={resetSelections}>Təmizlə</button>
+      
+      {/* Clear button */}
+      {clearButton && (
+        <button className="clear-button" onClick={resetSelections}>Təmizlə</button>
+      )}
     </div>
   );
 }

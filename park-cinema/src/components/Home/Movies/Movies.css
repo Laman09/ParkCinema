@@ -6,7 +6,6 @@
   gap: 30px;
   padding: 60px;
 }
-
 .movie-card {
   width: 300px;
   color: #d9dadb;
@@ -17,10 +16,10 @@
   transition: transform 0.3s ease;
 }
 .movie-card:hover img {
-  transform: scale(1.05); /* hover zamanı böyümə */
+  transform: scale(1.05);
 }
 .movie-card h3{
-    padding: 10px 10px 25px;
+  padding: 10px 10px 25px;
 }
 .movie-card img {
   width: 100%;
@@ -29,20 +28,20 @@
   transition: transform 0.3s ease;
 }
 .movie-card p{
-    padding-left: 10px;
-    font-size: 14px;
+  padding-left: 10px;
+  font-size: 14px;
 }
 .movie-info {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   color: #d9dadb;
   text-align: right;
   display: flex;
   justify-content: space-between;
 }
 .movie-info p{
-    padding: 0;
+  padding: 0;
 }
 .movie-info img{
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }

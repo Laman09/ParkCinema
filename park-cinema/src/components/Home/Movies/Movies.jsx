@@ -3,7 +3,7 @@ import { useMovies } from './useMovies';
 import { languageIcons } from '../../../utils/languageIcons';
 import './Movies.css';
 
-const Movies = ({ filter }) => {
+const Movies = ({ filter, cinemas }) => {
   const { movies, loading, error } = useMovies();
   const today = new Date();
 
@@ -25,6 +25,7 @@ const Movies = ({ filter }) => {
                 <img src={movie.poster_path} alt={movie.original_title} />
                 <h3>{movie.original_title}</h3>
                 <p>{movie.releaseDate}</p>
+                <p>Cinema: {movie.cinema}</p>
                 <div className="movie-info">
                     <p>Popularity: {movie.popularity}</p>
                     {movie.original_language && languageIcons[movie.original_language.toLowerCase()] && (

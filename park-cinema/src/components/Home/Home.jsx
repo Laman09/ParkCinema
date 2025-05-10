@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./Home.css";
 import Movies from './Movies/Movies';
 import Selections from './Selections/Selections';
+import BackgroundSlider from '../Layout/BackgroundSlider';
 
 const Home = () => {
   const languages = ["RU", "EN", "FR"];
@@ -13,6 +14,8 @@ const Home = () => {
   };
 
   return (
+    <>
+    <BackgroundSlider />
     <section className="list">
       <div className="headings">
         <ul id='films'>
@@ -44,9 +47,10 @@ const Home = () => {
       </div>
       <Selections languages={languages} cinemas={cinemas} />
       <div className="movies">
-        <Movies filter={filter} />
+        <Movies filter={filter} cinemas={cinemas} />
       </div>
     </section>
+    </>
   );
 };
 

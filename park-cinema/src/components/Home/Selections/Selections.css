@@ -160,13 +160,10 @@ span{
     color: #ef4444;
     cursor: pointer;
     text-align: center;
-    /* display: inline-block; */
 }
 
 .clear-button:hover {
     background-color: #ef4444;
     color: #d9dadb;
-}
-.clear-button.show {
-  display: block;
+    transition-duration: 0.3s;
 }
