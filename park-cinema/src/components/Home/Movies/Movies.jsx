@@ -3,12 +3,29 @@ import { useMovies } from './useMovies';
 import { languageIcons } from '../../../utils/languageIcons';
 import './Movies.css';
 
-const Movies = ({ filter, cinemas }) => {
+const Movies = ({ filter, selectedLanguage, selectedCinema, selectedDate }) => {
   const { movies, loading, error } = useMovies();
   const today = new Date();
 
   const filteredMovies = movies.filter(movie => {
     const movieDate = new Date(movie.releaseDate);
+
+    // if (filter === 'upcoming' && movieDate <= today) {
+    //   return false;
+    // }
+
+    // if (selectedLanguage !== "Dil" && movie.original_language !== selectedLanguage.toLowerCase()) {
+    //   return false;
+    // }
+
+    // if (selectedCinema !== "Kinoteatr" && movie.cinema !== selectedCinema) {
+    //   return false;
+    // }
+
+    // if (selectedDate && selectedDate.format("DD.MM.YYYY") !== movie.releaseDate) {
+    //   return false;
+    // }
+
     if (filter === 'upcoming') {
       return movieDate > today;
     }

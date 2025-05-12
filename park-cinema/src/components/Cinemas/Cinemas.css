@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cinemas .cards{
+    background-color: #373737;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cinemas .cards .card{
+    background-color: #4d4d4d;
+    width: 450px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.066);
+}
+.cinemas .cards .card:hover{
+    background-color: #484747;
+    transition-duration: 0.2s;
+}
+.cinemas .cards .card img{
+    border-radius: 10px;
+    width: 400px;
+}
+.cinemas .cards .card h3{
+    font-size: 20px;
+    color: #d9dadb;
+    padding: 10px;
+}
+.cinemas .cards .card p{
+    color: #d9dadb;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+.cinemas .cards .card p svg{
+    margin-right: 6px;
+}

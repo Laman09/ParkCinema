@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.campaigns .container{
+    background-color: #373737;
+    padding: 50px 0;
+}
+.campaigns .container .heading h1{
+    color: #d9dadb;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 35px;
+}
+.campaigns .container .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 35px;
+}
+.campaigns .container .cards .card{
+    background-color: #4d4d4d;
+    width: 470px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.066);
+}
+.campaigns .container .cards .card img{
+    border-radius: 10px;
+    width: 430px;
+}
+.campaigns .container .cards .card h3{
+    font-size: 20px;
+    color: #d9dadb;
+    padding: 10px 0;
+    font-weight: 500;
+}

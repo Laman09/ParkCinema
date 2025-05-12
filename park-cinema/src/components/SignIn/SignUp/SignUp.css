@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.signUp .container{
+    background-color: #373737;
+    padding: 50px;
+}
+.signUp .container .heading h1{
+    font-size: 30px;
+    color: #d9dadb;
+    padding: 0 10px;
+    font-weight: 500;
+}
+.signUp .container .inputBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.signUp .container .inputBar .inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px;
+}
+.signUp .container .inputBar .inputs .name input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .surname input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .number input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .email input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .date input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .password input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .inputs .radio input{
+    color: #d9dadb;
+    background-color: transparent;
+}
+.radio{
+    width: 500px;
+}
+label{
+    color: #d9dadb;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.signUp .container .inputBar .inputs .confirmPassword input{
+    border: none;
+    border-bottom: 1px solid #d9dadb;
+    outline: none;
+    color: #d9dadb;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px;
+    width: 500px;
+}
+.signUp .container .inputBar .button{
+    /* padding-top: 30px; */
+    margin-right: 150px;
+    display: flex;
+    justify-content: end;
+}
+.signUp .container .inputBar .button button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d52a1ea9;
+    transition-duration: 0.3s;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 15px;
+    color: #d9dadb;
+    border: none;
+    padding: 20px;
+    width: 500px;
+}
+.signUp .container .inputBar .button button:hover{
+    background-color: #d52b1e;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}

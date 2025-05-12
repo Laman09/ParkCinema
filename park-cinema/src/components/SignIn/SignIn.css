@@ -13,7 +13,7 @@
 .signIn .container .heading h1{
     font-size: 35px;
     color: #d9dadb;
-    padding: 40px;
+    padding: 10px 50px;
     font-weight: 500;
 }
 .signIn .container .inputBar{
@@ -33,7 +33,7 @@
     border-bottom: 1px solid #d9dadb;
     outline: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     background-color: transparent;
     padding: 10px;
     width: 700px;
@@ -45,7 +45,7 @@
     color: white;
     background-color: transparent;
     padding: 10px;
-    font-size: 18px;
+    font-size: 16px;
     width: 700px;
 }
 .signIn .container .inputBar .inputs .password a{
@@ -71,14 +71,12 @@
     font-size: 15px;
     color: #d9dadb;
     border: none;
-    /* opacity: 65px; */
     padding: 20px;
     width: 700px;
 }
 .signIn .container .inputBar .button button:hover{
     background-color: #d52b1e;
     transition-duration: 0.3s;
-    /* opacity: 100px; */
     cursor: pointer;
 }
 .signIn .container .inputBar p{

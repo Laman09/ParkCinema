@@ -3,12 +3,15 @@ import "./Home.css";
 import Movies from './Movies/Movies';
 import Selections from './Selections/Selections';
 import BackgroundSlider from '../Layout/BackgroundSlider';
+import { useSelection } from '../../contexts/SelectionsContext';
 
 const Home = () => {
   const languages = ["RU", "EN", "FR"];
   const cinemas = ["Park Bulvar", "Metro Park", "Flame Towers", "Sevinc Mall", "Shahdag"];
 
+  const { language, cinema, selectedDate } = useSelection();
   const [filter, setFilter] = useState('all');
+
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
   };
@@ -47,7 +50,7 @@ const Home = () => {
       </div>
       <Selections languages={languages} cinemas={cinemas} />
       <div className="movies">
-        <Movies filter={filter} cinemas={cinemas} />
+        <Movies filter={filter} selectedLanguage={language} selectedCinema={cinema} selectedDate={selectedDate} />
       </div>
     </section>
     </>

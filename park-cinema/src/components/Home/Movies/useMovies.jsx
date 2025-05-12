@@ -21,13 +21,22 @@ export const useMovies = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const cinemas = ["Park Bulvar", "Metro Park", "Flame Towers", "Sevinc Mall", "Shahdag"]
   useEffect(() => {
     const loadMovies = async () => {
       try {
         const res = await axios.get('https://jsonfakery.com/movies/paginated');
+
+        // console.log("API Response:", res.data);
+
+        // if (!res.data || !res.data.data) {
+        //   throw new Error("Invalid API response");
+        // }
+
         const moviesWithDates = res.data.data.map(movie => ({
           ...movie,
           releaseDate: getRandomDateWithinNextMonth(),
+          cinema: cinemas[Math.floor(Math.random() * cinemas.length)]
         }));
         setMovies(moviesWithDates);
       } catch (err) {
