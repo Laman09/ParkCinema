@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './BackgroundSlider.css'
 
 const images = [
@@ -17,25 +17,16 @@ const BackgroundSlider = () => {
         console.log("Button clicked");
         setCurrentImage((prev) => (prev + 1) % images.length);
     };
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentImage((prev) => (prev + 1) % images.length);
-        }, 5000);
-
-        return () => clearInterval(timer);
-    }, []);
     
     return(
         <div className="backgroundImages">
             <img src={images[currentImage]} alt="background" className="bgSlide" />
             <img src={overlayImage} alt="overlay" className="bgOverlay" />
             <button onClick={nextImage} className="nextButton">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m9 5l6 7l-6 7" />
                 </svg>
             </button>
-            {/* <button onClick={()=>(console.log("Button clicked"))} className="nextButton">Next</button> */}
         </div>
     )
 }

@@ -26,12 +26,7 @@ export const useMovies = () => {
     const loadMovies = async () => {
       try {
         const res = await axios.get('https://jsonfakery.com/movies/paginated');
-
-        // console.log("API Response:", res.data);
-
-        // if (!res.data || !res.data.data) {
-        //   throw new Error("Invalid API response");
-        // }
+        // console.log("API cavabı:", res.data);
 
         const moviesWithDates = res.data.data.map(movie => ({
           ...movie,
@@ -40,6 +35,7 @@ export const useMovies = () => {
         }));
         setMovies(moviesWithDates);
       } catch (err) {
+        // console.error("Xəta baş verdi:", err);
         setError('There is a problem');
       } finally {
         setLoading(false);

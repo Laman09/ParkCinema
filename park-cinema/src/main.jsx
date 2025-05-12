@@ -16,8 +16,8 @@ createRoot(document.getElementById('root')).render(
     <SelectionsProvider>
       <BrowserRouter>
         <Routes>
-            <Route index element = {<Home />}></Route>
           <Route path = '/' element = {<Layout />}>
+            <Route index element = {<Home />}></Route>
             <Route path = '/az' element = {<Home />}></Route>
             <Route path = '/az/cinemas' element = {<Cinemas />}></Route>
             <Route path = '/az/campaigns' element = {<Campaigns />}></Route>

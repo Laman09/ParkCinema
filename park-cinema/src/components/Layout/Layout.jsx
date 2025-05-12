@@ -1,10 +1,23 @@
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link, useLocation } from "react-router-dom"
+import { useEffect, useState } from "react";
 import "./Layout.css"
 
-const Layout = () => {    
+const Layout = () => {
+
+    const location = useLocation();
+    const [headerHeight, setHeaderHeight] = useState('100px');
+
+    useEffect(() => {
+        if (location.pathname === '/az') {
+            setHeaderHeight('100px'); 
+        } else {
+            setHeaderHeight('100px');
+        }
+    }, [location.pathname]);
+
     return(
         <>
-            <header>
+            <header style={{ height: headerHeight, backgroundColor: '#373737' }}>
                 <div className="container">
                     <div className="logo">
                         <a href="/az">

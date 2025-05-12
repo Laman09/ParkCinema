@@ -18,41 +18,46 @@ const Home = () => {
 
   return (
     <>
-    <BackgroundSlider />
-    <section className="list">
-      <div className="headings">
-        <ul id='films'>
-          <li><a href="/az">Siyahı</a></li>
-          <li style={{ textShadow: "none" }}><a href="/az/trailers">Treylerlər</a></li>
-        </ul>
-        <ul id='schedule'>
-          <div className="filterButtons">
-            <button
-              onClick={() => handleFilterChange('all')}
-              className={filter === 'all' ? 'active' : ''}
-            >
-              Hamısı
-            </button>
-            <button
-              onClick={() => handleFilterChange('upcoming')}
-              className={filter === 'upcoming' ? 'active' : ''}
-            >
-              Tezliklə
-            </button>
-            <button
-              onClick={() => handleFilterChange('schedule')}
-              className={filter === 'schedule' ? 'active' : ''}
-            >
-              Cədvəl
-            </button>
-          </div>
-        </ul>
-      </div>
-      <Selections languages={languages} cinemas={cinemas} />
-      <div className="movies">
-        <Movies filter={filter} selectedLanguage={language} selectedCinema={cinema} selectedDate={selectedDate} />
-      </div>
-    </section>
+      <BackgroundSlider />
+      <section className="list">
+        <div className="headings">
+          <ul id='films'>
+            <li><a href="/az">Siyahı</a></li>
+            <li style={{ textShadow: "none" }}><a href="/az/trailers">Treylerlər</a></li>
+          </ul>
+          <ul id='schedule'>
+            <div className="filterButtons">
+              <button
+                onClick={() => handleFilterChange('all')}
+                className={filter === 'all' ? 'active' : ''}
+              >
+                Hamısı
+              </button>
+              <button
+                onClick={() => handleFilterChange('upcoming')}
+                className={filter === 'upcoming' ? 'active' : ''}
+              >
+                Tezliklə
+              </button>
+              <button
+                onClick={() => handleFilterChange('schedule')}
+                className={filter === 'schedule' ? 'active' : ''}
+              >
+                Cədvəl
+              </button>
+            </div>
+          </ul>
+        </div>
+        <Selections languages={languages} cinemas={cinemas} />
+        <div className="movies">
+          <Movies 
+            filter={filter} 
+            selectedLanguage={language} 
+            selectedCinema={cinema} 
+            selectedDate={selectedDate} 
+          />
+        </div>
+      </section>
     </>
   );
 };

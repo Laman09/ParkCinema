@@ -1,6 +1,8 @@
 .list{
     background-color: #373737;
     padding: 20px 16px;
+    position: relative;
+    z-index: 3;
 }
 .list .headings #films{
     display: flex;
@@ -46,6 +48,5 @@
     text-underline-offset: 6px;
     opacity: 1;
     color: #d9dadb;
-
 }
 
