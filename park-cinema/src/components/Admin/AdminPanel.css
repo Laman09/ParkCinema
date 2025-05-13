@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.adminPanel .container{
+    padding: 90px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #373737;
+}
+.adminPanel .container h1{
+    font-size: 50px;
+    color: #d9dadb;
+    padding: 50px;
+    font-weight: 600;
+}
+.adminPanel .container nav{
+    padding: 50px;
+    color: #d9dadb;
+}
+.adminPanel a{
+    color: #d9dadb;
+    margin: 10px;
+    font-size: 22px;
+}
+.adminPanel a:hover{
+    color: #d52b1e;
+    transition-duration: 0.5s;
+}
+.adminPanel .container .button{
+    padding: 50px;
+}
+.adminPanel .container .button button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d52a1ea9;
+    transition-duration: 0.3s;
+    border-radius: 30px;
+    height: 40px;
+    font-size: 15px;
+    color: #d9dadb;
+    border: none;
+    padding: 20px;
+    width: 700px;
+}
+.adminPanel .container .button button:hover{
+    background-color: #d52b1e;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}

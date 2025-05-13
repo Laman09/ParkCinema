@@ -4,6 +4,7 @@ import Movies from './Movies/Movies';
 import Selections from './Selections/Selections';
 import BackgroundSlider from '../Layout/BackgroundSlider';
 import { useSelection } from '../../contexts/SelectionsContext';
+import Schedule from './Schedule/Schedule';
 
 const Home = () => {
   const languages = ["RU", "EN", "FR"];
@@ -50,12 +51,21 @@ const Home = () => {
         </div>
         <Selections languages={languages} cinemas={cinemas} />
         <div className="movies">
-          <Movies 
-            filter={filter} 
-            selectedLanguage={language} 
-            selectedCinema={cinema} 
-            selectedDate={selectedDate} 
-          />
+          {filter === 'schedule' ? (
+            <Schedule 
+              filter={filter}
+              selectedLanguage={language}
+              selectedCinema={cinema}
+              selectedDate={selectedDate}
+            />
+          ) : (
+            <Movies 
+              filter={filter}
+              selectedLanguage={language}
+              selectedCinema={cinema}
+              selectedDate={selectedDate}
+            />
+          )}
         </div>
       </section>
     </>

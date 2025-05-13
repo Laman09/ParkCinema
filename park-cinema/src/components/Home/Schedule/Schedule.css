@@ -1,0 +1,63 @@
+.container{
+    width: 100%;
+    overflow-x: auto ;
+    padding: 50px;
+}
+.container .schedule-table{
+    display: table;
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+.container .schedule-table tbody{
+    text-align: center;
+    display: table-row-group;
+}
+.container .schedule-table tbody tr{
+    border-bottom: 1px solid #d9dadb;
+    background-color: #383838;
+    transition-duration: 15s;
+}
+.container .schedule-table tbody tr td{
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 16px 8px;
+}
+.container .schedule-table tbody tr td.sub{
+    border: 1px solid #d9dadb;
+    min-height: 40px;
+    border-radius: 10px;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100px;
+    min-width: 20px;
+    padding: 4px 16px;
+    margin: 10px;
+    font-size: 14px;
+}
+.container .schedule-table tbody tr td a button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d52a1ea9;
+    transition-duration: 0.2s;
+    border-radius: 20px;
+    width: 170px;
+    height: 36px;
+    padding: 8px 16px;
+    border: none;
+    color: #fff;
+}
+.container .schedule-table tbody tr td a button:hover{
+    background-color: #d52b1e;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: end;
+}

@@ -77,9 +77,6 @@ const Layout = () => {
                                 <li>
                                     <a href="/az/contact">Əlaqə</a>
                                 </li>
-                                <li>
-                                    <a href="/az/term-conditions">Hüquqi Şərtlər</a>
-                                </li>
                             </ul>
                         </li>
                         <li className='thcolumn'>

@@ -1,0 +1,98 @@
+.ticket-container {
+    padding: 20px;
+    background-color: #373737;
+    color: white;
+}
+.ticket-container h2{
+    font-size: 30px;
+    color: #d9dadb;
+    padding: 20px 30px;
+    font-weight: 500;
+}
+.ticket-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    object-fit: cover;
+    background-image: url(https://new.parkcinema.az/images/movie-herobg.svg);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+}
+.ticket-box::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+    background-color: #161616d6;
+    border-radius: 10px;
+}
+
+.ticket-poster {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.ticket-info p {
+  margin: 15px 0;
+  color: #d9dadb;
+  display: flex;
+  align-items: center;
+}
+.ticket-info h3{
+    font-weight: 500;
+    margin: 10px 0 30px;
+}
+.legend {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.legend .seat-info{
+    display: flex;
+}
+.legend .seat-info span {
+    margin-right: 15px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #d9dadb;
+}
+.available{
+    display: flex;
+}
+.available div{
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    border: none;
+    background-color: #d9dadb;
+    margin-right: 5px;
+}
+.taken{
+    display: flex;
+}
+.taken div{
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    border: none;
+    background-color: #000;
+    margin-right: 5px;
+}
+.selected {
+    display: flex;
+}
+.selected div{
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    border: none;
+    background-color: #d52b1e;
+    margin-right: 5px;
+}
+.seatSelector{
+    padding-top: 50px;
+}

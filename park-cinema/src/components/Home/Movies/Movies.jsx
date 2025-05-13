@@ -1,5 +1,5 @@
-// import React from 'react';
-import { useMovies } from './useMovies';
+import React from 'react';
+import { useMovies } from './hooks/useMovies';
 import { languageIcons } from '../../../utils/languageIcons';
 import './Movies.css';
 import dayjs from 'dayjs';
@@ -53,26 +53,28 @@ const Movies = ({ filter, selectedLanguage, selectedCinema, selectedDate }) => {
   }
   
   return (
-    <div className="movie-cards">
-      {filteredMovies.slice(0, 12).map(movie => (
-        <div key={movie.id} className="movie-card">
-          <img src={movie.poster_path} alt={movie.original_title} />
-          <h3>{movie.original_title}</h3>
-          <p>{movie.releaseDate}</p>
-          <p>Cinema: {movie.cinema}</p>
-          <div className="movie-info">
-            <p>Popularity: {movie.popularity}</p>
-            {movie.original_language && languageIcons[movie.original_language.toLowerCase()] && (
-              <img
-                src={languageIcons[movie.original_language]}
-                alt={movie.original_language}
-                className="flag-icon"
-              />
-            )}
+    <section className='movies'>
+      <div className="movie-cards">
+        {filteredMovies.slice(0, 12).map(movie => (
+          <div key={movie.id} className="movie-card">
+            <img src={movie.poster_path} alt={movie.original_title} />
+            <h3>{movie.original_title}</h3>
+            <p>{movie.releaseDate}</p>
+            <p>Cinema: {movie.cinema}</p>
+            <div className="movie-info">
+              <p>Popularity: {movie.popularity}</p>
+              {movie.original_language && languageIcons[movie.original_language.toLowerCase()] && (
+                <img
+                  src={languageIcons[movie.original_language]}
+                  alt={movie.original_language}
+                  className="flag-icon"
+                />
+              )}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
