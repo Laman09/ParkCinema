@@ -6,42 +6,43 @@ import { useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
 
 const getRandomTime = () => {
-  const hours = Math.floor(Math.random() * 14) + 9;
-  const minutes = Math.random() < 0.5 ? '00' : '30';
-  return `${hours}:${minutes}`;
+    const hours = Math.floor(Math.random() * 14) + 9;
+    const minutes = Math.random() < 0.5 ? '00' : '30';
+    return `${hours}:${minutes}`;
 };
 
 const Schedule = ({selectedLanguage, selectedCinema, selectedDate }) => {
-  const { movies, loading, error } = useMovies();
-  const navigate = useNavigate();
+    const { movies, loading, error } = useMovies();
+    const navigate = useNavigate();
 
-  const handleBuyClick = (movie) => {
-    navigate('/az/tickets', { state: { movie } });
-  };
+    const handleBuyClick = (movie) => {
+        const time = getRandomTime();
+        navigate('/az/tickets', { state: { movie: { ...movie, time } } });
+    };
 
-  const filteredMovies = movies.filter(movie => {
+    const filteredMovies = movies.filter(movie => {
 
-    if (selectedLanguage && selectedLanguage !== 'Dil') {
-      if (movie.original_language.toLowerCase() !== selectedLanguage.toLowerCase()) {
-        return false;
-      }
-    }
+        if (selectedLanguage && selectedLanguage !== 'Dil') {
+            if (movie.original_language.toLowerCase() !== selectedLanguage.toLowerCase()) {
+                return false;
+            }
+        }
 
-    if (selectedCinema && selectedCinema !== 'Kinoteatr') {
-      if (movie.cinema !== selectedCinema) {
-        return false;
-      }
-    }
+        if (selectedCinema && selectedCinema !== 'Kinoteatr') {
+            if (movie.cinema !== selectedCinema) {
+                return false;
+            }
+        }
 
-    if (selectedDate && !selectedDate.isSame(dayjs(), 'day')) {
-      const movieDay = dayjs(movie.releaseDate, 'DD.MM.YYYY');
-      if (!movieDay.isSame(selectedDate, 'day')) {
-        return false;
-      }
-    }
+        if (selectedDate && !selectedDate.isSame(dayjs(), 'day')) {
+            const movieDay = dayjs(movie.releaseDate, 'DD.MM.YYYY');
+            if (!movieDay.isSame(selectedDate, 'day')) {
+                return false;
+            }
+        }
 
-    return true;
-});
+        return true;
+    });
 
     if (loading) 
         return <p style={{textAlign:"center", color:"#d9dadb", padding:"50px", fontSize:"18px"}}>

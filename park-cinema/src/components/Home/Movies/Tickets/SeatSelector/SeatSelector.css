@@ -66,10 +66,10 @@
 }
 .seat .tooltip {
     position: absolute;
-    top: -30px;
+    top: -20px;
     background-color: #353535;
     color: #d9dadb;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
     font-size: 12px;
     opacity: 0;

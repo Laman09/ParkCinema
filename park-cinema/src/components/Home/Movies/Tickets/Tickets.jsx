@@ -3,11 +3,11 @@ import { useLocation } from 'react-router-dom';
 import './Tickets.css';
 import SeatSelector from './SeatSelector/SeatSelector';
 
-const getRandomTime = () => {
-  const hours = Math.floor(Math.random() * 14) + 9;
-  const minutes = Math.random() < 0.5 ? '00' : '30';
-  return `${hours}:${minutes}`;
-};
+// const getRandomTime = () => {
+//   const hours = Math.floor(Math.random() * 14) + 9;
+//   const minutes = Math.random() < 0.5 ? '00' : '30';
+//   return `${hours}:${minutes}`;
+// };
 
 const Tickets = () => {
     const { state } = useLocation();
@@ -46,7 +46,7 @@ const Tickets = () => {
 	                            </g>
                             </svg>
                         </strong>
-                        {getRandomTime()}
+                        {movie.time}
                     </p>
                     <p>
                         <strong>Dil:</strong> 
@@ -84,7 +84,7 @@ const Tickets = () => {
             </div>
 
             <div className="seatSelector">
-                <SeatSelector />
+                <SeatSelector movie={movie}/>
             </div>
         </div>
     );

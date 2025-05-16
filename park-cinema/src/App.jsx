@@ -12,14 +12,17 @@ import Campaigns from "./components/Campaigns/Campaigns";
 import FAQ from "./components/FAQ/FAQ";
 import Contact from "./components/Contact/Contact";
 import NotFound from "./components/NotFound/NotFound";
+import BuyTickets from "./components/Home/Movies/Tickets/BuyTickets/BuyTickets";
 
-const App = () => {
+function App() {
+
     return (
         <Routes>
             <Route path='/' element = {<Layout />}>
                 <Route index element = {<Home />} />
                 <Route path='/az' element = {<Home />} />
                 <Route path = '/az/tickets' element = {<Tickets />}></Route>
+                <Route path = '/az/buytickets' element = {<BuyTickets />}></Route>
                 <Route path = '/az/cinemas' element = {<Cinemas />}></Route>
                 <Route path = '/az/campaigns' element = {<Campaigns />}></Route>
                 <Route path = '/az/faq' element = {<FAQ />}></Route>

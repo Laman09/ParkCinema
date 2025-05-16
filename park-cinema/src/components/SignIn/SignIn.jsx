@@ -19,7 +19,7 @@ const SignIn = () => {
         setError("");
 
         setTimeout(() => {
-            if (email === "ljalilli@gmail.com" && password === "lc29102009") {
+            if (email === "user123@gmail.com" && password === "123abc") {
                 setLoading(false);
                 localStorage.setItem("isAdmin", "true");
                 window.location.href = "/admin";

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './SeatSelector.css';
+import { useNavigate } from 'react-router-dom';
 
 const rows = 8;
 const seatsPerRow = 10;
 const seatPrice = 5;
 
-const SeatSelector = () => {
+const SeatSelector = ({movie}) => {
     const [selectedSeats, setSelectedSeats] = useState([]);
     const [takenSeats, setTakenSeats] = useState([]);
     const [zoom, setZoom] = useState(1);
@@ -23,6 +24,18 @@ const SeatSelector = () => {
 
         setTakenSeats(Array.from(taken));
     }, []);
+
+    const navigate = useNavigate();
+
+    const handleBuy = () => {
+        navigate('/az/buytickets', {
+            state: {
+                selectedSeats,
+                totalPrice: selectedSeats.length * seatPrice,
+                movie,
+            },
+        });
+    };
 
     const handleSeatClick = (row, seat) => {
         const id = `${row}-${seat}`;
@@ -78,7 +91,7 @@ const SeatSelector = () => {
                         );
                     })}
                 </div>
-                <button className="buy-button">Bilet al</button>
+                <button onClick={handleBuy} className="buy-button">Bilet al</button>
             </div>
         </>
     );
