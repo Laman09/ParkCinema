@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./SignUp.css";
 
 const SignUp = () => {
-
     const [name, setName] = useState("");
     const [surname, setSurname] = useState("");
     const [number, setNumber] = useState("");
@@ -19,32 +18,42 @@ const SignUp = () => {
     };
 
     const handleSubmit = async (e) => {
-    e.preventDefault();
+        e.preventDefault();
+            
+        if (!name || !surname || !number || !email || !date || !password || !confirmPassword) {
+            setError("Bütün sahələri doldurduğunuzdan əmin olun.");
+            return;
+        }
+    
+        if (password !== confirmPassword) {
+            setError("Şifrələr uyğun gəlmir.");
+            return;
+        }
+    
+        setLoading(true);
+        setError("");
 
-    if (!name || !surname || !number || !email || !date || !password || !confirmPassword) {
-      setError("Bütün sahələri doldurduğunuzdan əmin olun.");
-      return;
-    }
+        setTimeout(() => {
+            const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (password !== confirmPassword) {
-      setError("Şifrələr uyğun gəlmir.");
-      return;
-    }
+            const newUser = {
+                name,
+                surname,
+                number,
+                email,
+                date,
+                gender,
+                password,
+            };
+        
+            const updatedUsers = [...existingUsers, newUser];
+            localStorage.setItem("users", JSON.stringify(updatedUsers));
+        
+            setLoading(false);
+            window.location.href = "/az/sign-in";
+        }, 1000);
+    };
 
-    setLoading(true);
-    setError("");
-
-    // Mock API
-    setTimeout(() => {
-      if (email === "ljalilli@gmail.com") {
-        setLoading(false);
-        window.location.href = "/az/sign-in";
-      } else {
-        setLoading(false);
-        setError("Qeydiyyat uğursuz oldu. Təkrar yoxlayın.");
-      }
-    }, 1000);
-  };
 
     return(
         <section className="signUp">

@@ -110,7 +110,6 @@ label{
     width: 500px;
 }
 .signUp .container .inputBar .button{
-    /* padding-top: 30px; */
     margin-right: 170px;
     display: flex;
     justify-content: end;

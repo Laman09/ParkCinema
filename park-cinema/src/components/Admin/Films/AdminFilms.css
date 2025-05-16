@@ -17,7 +17,13 @@
     padding: 50px;
     font-weight: 600;
 }
-.adminFilms .container input{
+.adminFilms .container .filmInputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.adminFilms .container .filmInputs input{
     border: none;
     border-bottom: 1px solid #d9dadb;
     outline: none;
@@ -25,7 +31,8 @@
     font-size: 16px;
     background-color: transparent;
     padding: 20px;
-    width: 400px;
+    width: 500px;
+    margin-right: 20px
 }
 .adminFilms .container button.add{
     display: flex;
@@ -42,29 +49,48 @@
     padding: 20px;
     width: 400px;
 }
-.adminFilms ul{
-    list-style: none;
+.adminFilms .container button.add:hover{
+    cursor: pointer;
+    background-color: #d52b1e;
+    transition-duration: 0.3s;
+}
+.adminFilms .container .filmTable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adminFilms .container .filmTable table{
+    border:  1px solid#d9dadb;
+    background-color: #4d4d4d;
+    border-radius: 10px;
     color: #d9dadb;
 }
-.adminFilms li{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+.adminFilms .container .filmTable table td{
+    padding: 30px;
+    border-right: 1px solid #d9dadb;
+    border-bottom: 1px solid #d9dadb;
 }
-.adminFilms ul li button.delete{
-    width: 80px;
+.adminFilms .container .filmTable table th{
+    padding: 20px;
+    border-bottom: 1px solid #d9dadb;
+    border-right: 1px solid #d9dadb;
+}
+.adminFilms .container .filmTable tr td button{
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #d52a1ea9;
     transition-duration: 0.3s;
-    border-radius: 30px;
-    height: 20px;
+    border-radius: 20px;
+    height: 40px;
     font-size: 15px;
     color: #d9dadb;
     border: none;
     padding: 20px;
-    margin-left: 50px;
+    width: 80px;
+}
+.adminFilms .container .filmTable tr td button:hover{
+    background-color: #d52b1e;
+    transition-duration: 0.3s;
     cursor: pointer;
 }

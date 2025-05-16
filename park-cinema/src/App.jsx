@@ -4,7 +4,7 @@ import Home from "./components/Home/Home";
 import SignIn from "./components/SignIn/SignIn";
 import SignUp from "./components/SignIn/SignUp/SignUp";
 import AdminPanel from "./components/Admin/AdminPanel";
-import AdminFilms from "./components/Admin/AdminFilms";
+import AdminFilms from "./components/Admin/Films/AdminFilms";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import Tickets from "./components/Home/Movies/Tickets/Tickets";
 import Cinemas from "./components/Cinemas/Cinemas";
@@ -13,6 +13,8 @@ import FAQ from "./components/FAQ/FAQ";
 import Contact from "./components/Contact/Contact";
 import NotFound from "./components/NotFound/NotFound";
 import BuyTickets from "./components/Home/Movies/Tickets/BuyTickets/BuyTickets";
+import AdminUsers from "./components/Admin/Users/AdminUsers";
+import AdminTickets from "./components/Admin/UserTicket/AdminTickets";
 
 function App() {
 
@@ -44,6 +46,22 @@ function App() {
                 element={
                     <ProtectedRoute>
                         <AdminFilms />
+                    </ProtectedRoute>
+                }
+            />
+            <Route
+                path="/admin/users"
+                element={
+                    <ProtectedRoute>
+                        <AdminUsers />
+                    </ProtectedRoute>
+                }
+            />
+            <Route
+                path="/admin/userTickets"
+                element={
+                    <ProtectedRoute>
+                        <AdminTickets />
                     </ProtectedRoute>
                 }
             />

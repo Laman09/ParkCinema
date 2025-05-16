@@ -19,13 +19,18 @@ const SignIn = () => {
         setError("");
 
         setTimeout(() => {
-            if (email === "user123@gmail.com" && password === "123abc") {
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+
+            const matchedUser = users.find(user => user.email === email && user.password === password);
+
+            if (matchedUser) {
                 setLoading(false);
-                localStorage.setItem("isAdmin", "true");
-                window.location.href = "/admin";
+                localStorage.setItem("currentUser", JSON.stringify(matchedUser));
+                window.location.href = "/";
             } else {
                 setLoading(false);
-                setError("Giriş uğursuz oldu. Yanlış email və ya şifrə.");
+                setError("");
+                alert("Giriş uğursuz oldu. Email və ya şifrə yalnışdır.");
             }
         }, 1000);
     }

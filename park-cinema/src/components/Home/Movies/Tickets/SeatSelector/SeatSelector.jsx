@@ -28,6 +28,11 @@ const SeatSelector = ({movie}) => {
     const navigate = useNavigate();
 
     const handleBuy = () => {
+        if (selectedSeats.length === 0) {
+            alert("Zəhmət olmasa bilet almaq üçün ən azı bir yer seçin!");
+            return;
+        }
+        
         navigate('/az/buytickets', {
             state: {
                 selectedSeats,
@@ -80,7 +85,6 @@ const SeatSelector = ({movie}) => {
             </div>
             <div className="summaryPrice">
                 <div className="price">
-                    <p>Ümumi: {selectedSeats.length * seatPrice} AZN</p>
                     {selectedSeats.map(seat => {
                         const [row, seatIdx] = seat.split('-');
                         return (
@@ -90,6 +94,7 @@ const SeatSelector = ({movie}) => {
                             </p>
                         );
                     })}
+                    <p>Ümumi: {selectedSeats.length * seatPrice} AZN</p>
                 </div>
                 <button onClick={handleBuy} className="buy-button">Bilet al</button>
             </div>

@@ -13,7 +13,7 @@ const AdminPanel = () => {
                     <br />
                     <Link to="users">İstifadəçilər</Link>
                     <br />
-                    <Link to="sessions">Seanslar</Link>
+                    <Link to="userTickets">Biletlər</Link>
                 </nav>
                 <Outlet />
                 <div className="button">
