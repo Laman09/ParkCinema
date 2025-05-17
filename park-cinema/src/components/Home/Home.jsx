@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <BackgroundSlider />
+      {/* <BackgroundSlider /> */}
       <section className="list">
         <div className="headings">
           <ul id='films'>

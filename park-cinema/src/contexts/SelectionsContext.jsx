@@ -7,24 +7,10 @@ export const SelectionsProvider = ({ children }) => {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [cinemaOpen, setCinemaOpen] = useState(false);
 
-  const [language, setLanguage] = useState(() => localStorage.getItem('language') || "Dil");
-  const [cinema, setCinema] = useState(() => localStorage.getItem('cinema') || "Kinoteatr");
-  const [selectedDate, setSelectedDate] = useState(() => {
-    const storedDate = localStorage.getItem('selectedDate');
-    return storedDate ? dayjs(storedDate) : dayjs();
-  });
+  const [language, setLanguage] = useState("Dil");
+  const [cinema, setCinema] = useState("Kinoteatr");
+  const [selectedDate, setSelectedDate] = useState(dayjs());
 
-  useEffect(() => {
-    localStorage.setItem('language', language);
-  }, [language]);
-
-  useEffect(() => {
-    localStorage.setItem('cinema', cinema);
-  }, [cinema]);
-
-  useEffect(() => {
-    localStorage.setItem('selectedDate', selectedDate.toISOString());
-  }, [selectedDate]);
 
   const handleLanguageSelect = (lang) => {
     setLanguage(lang);
@@ -40,10 +26,6 @@ export const SelectionsProvider = ({ children }) => {
     setLanguage("Dil");
     setCinema("Kinoteatr");
     setSelectedDate(dayjs());
-
-    localStorage.removeItem('language');
-    localStorage.removeItem('cinema');
-    localStorage.removeItem('selectedDate');
   };
 
   return (

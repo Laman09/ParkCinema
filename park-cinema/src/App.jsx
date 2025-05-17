@@ -15,6 +15,7 @@ import NotFound from "./components/NotFound/NotFound";
 import BuyTickets from "./components/Home/Movies/Tickets/BuyTickets/BuyTickets";
 import AdminUsers from "./components/Admin/Users/AdminUsers";
 import AdminTickets from "./components/Admin/UserTicket/AdminTickets";
+import MovieDetails from "./components/Home/Movies/MovieDetails/MovieDetails";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
             <Route path='/' element = {<Layout />}>
                 <Route index element = {<Home />} />
                 <Route path='/az' element = {<Home />} />
+                <Route path="movies/:id" element={<MovieDetails />} />
                 <Route path = '/az/tickets' element = {<Tickets />}></Route>
                 <Route path = '/az/buytickets' element = {<BuyTickets />}></Route>
                 <Route path = '/az/cinemas' element = {<Cinemas />}></Route>

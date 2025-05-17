@@ -1,11 +1,13 @@
 import React from 'react';
 import { useMovies } from './hooks/useMovies';
+import { useNavigate } from 'react-router-dom';
 import { languageIcons } from '../../../utils/languageIcons';
 import './Movies.css';
 import dayjs from 'dayjs';
 
 const Movies = ({ filter, selectedLanguage, selectedCinema, selectedDate }) => {
   const { movies, loading, error } = useMovies();
+  const navigate = useNavigate();
 
   const filteredMovies = movies.filter(movie => {
     const movieDate = dayjs(movie.releaseDate, 'DD.MM.YYYY');
@@ -56,7 +58,11 @@ const Movies = ({ filter, selectedLanguage, selectedCinema, selectedDate }) => {
     <section className='movies'>
       <div className="movie-cards">
         {filteredMovies.slice(0, 12).map(movie => (
-          <div key={movie.id} className="movie-card">
+          <div 
+            key={movie.id} 
+            className="movie-card" 
+            onClick={() => navigate(`/movies/${movie.id}`, { state: { movie } })}
+          >
             <img src={movie.poster_path} alt={movie.original_title} />
             <h3>{movie.original_title}</h3>
             <p>{movie.releaseDate}</p>

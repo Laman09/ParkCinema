@@ -30,17 +30,15 @@
     background-color: #161616d6;
     border-radius: 10px;
 }
-
 .ticket-poster {
-  width: 200px;
-  border-radius: 10px;
+    width: 200px;
+    border-radius: 10px;
 }
-
 .ticket-info p {
-  margin: 15px 0;
-  color: #d9dadb;
-  display: flex;
-  align-items: center;
+    margin: 15px 0;
+    color: #d9dadb;
+    display: flex;
+    align-items: center;
 }
 .ticket-info h3{
     font-weight: 500;
