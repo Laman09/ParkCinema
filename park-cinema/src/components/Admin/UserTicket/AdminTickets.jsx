@@ -19,6 +19,16 @@ const AdminTickets = () => {
         setTickets(updatedTickets);
     };
 
+    const handleAllDelete = (index) => {
+        const confirmed = window.confirm("Bu bileti tam silmək istədiyinizə əminsiniz?");
+        if (!confirmed) return;
+
+        const updated = [...tickets];
+        updated.splice(index, 1);
+        localStorage.setItem("tickets", JSON.stringify(updated));
+        setTickets(updated);
+    };
+
     return (
         <section className="adminTickets">
             <div className="container">
@@ -41,6 +51,7 @@ const AdminTickets = () => {
                                     <th>Saat</th>
                                     <th>Yerlər</th>
                                     <th>Ümumi məbləğ</th>
+                                    <th style={{borderRight:"none"}}>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,8 +69,14 @@ const AdminTickets = () => {
                                             }).join(', ')}
                                         </td>
                                         <td>{ticket.totalPrice} AZN</td>
-                                        <td style={{border:"none"}}>
-                                            <button onClick={() => handleDelete(index)}>Sil</button>
+                                        <td style={{ border: "none" }}>
+                                            {ticket.status !== "Rədd edildi" ? (
+                                                <button onClick={() => handleDelete(index)}>Sil</button>
+                                            ) : (
+                                                <button onClick={() => handleAllDelete(index)} style={{ backgroundColor: '#a8a8a8c3' }}>
+                                                    Tam sil
+                                                </button>
+                                            )}
                                         </td>
                                     </tr>
                                 ))}

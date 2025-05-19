@@ -1,0 +1,18 @@
+.header {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    color: white;
+}
+
+.home-header {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.default-header {
+    background-color: #373737;
+}

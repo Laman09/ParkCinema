@@ -1,26 +1,31 @@
 import { Outlet, Link, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react";
 import "./Layout.css"
+import BackgroundSlider from "./BackgroundSlider/BackgroundSlider";
 
 const Layout = () => {
 
     const location = useLocation();
-    const [headerHeight, setHeaderHeight] = useState('100px');
+    const [headerColor, setHeaderColor] = useState('#373737');
+    const isHome = location.pathname === "/";
 
     useEffect(() => {
-        if (location.pathname === '/az') {
-            setHeaderHeight('100px'); 
-        } else {
-            setHeaderHeight('100px');
-        }
+        // if (location.pathname === '/') {
+        //     setHeaderColor('#373737'); 
+        // } else {
+        //     setHeaderColor('#373737');
+        // }
+        setHeaderColor('#373737');
+
     }, [location.pathname]);
 
     return(
         <>
-            <header style={{ height: headerHeight, backgroundColor: '#373737' }}>
+            <header style={{backgroundColor: headerColor}}
+            >
                 <div className="container">
                     <div className="logo">
-                        <a href="/az">
+                        <a href="/">
                             <img src="https://new.parkcinema.az/images/logo.svg" alt="cinema_logo" />
                         </a>
                     </div>
@@ -40,16 +45,16 @@ const Layout = () => {
                                     <Link to="/az/contact">Əlaqə</Link>
                                 </li>
                                 <li>
-                                    <Link to="/az/sign-in">Profil</Link>
+                                    <Link to="/az/profile">Profil</Link>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                 </div>  
+                {isHome && <BackgroundSlider />}
             </header>
 
             <Outlet />
-            
             <footer>
                 <div className="container">
                     <ul>

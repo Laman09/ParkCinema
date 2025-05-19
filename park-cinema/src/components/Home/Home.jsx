@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import "./Home.css";
 import Movies from './Movies/Movies';
 import Selections from './Selections/Selections';
-import BackgroundSlider from '../Layout/BackgroundSlider';
 import { useSelection } from '../../contexts/SelectionsContext';
 import Schedule from './Schedule/Schedule';
 
@@ -19,7 +18,6 @@ const Home = () => {
 
   return (
     <>
-      {/* <BackgroundSlider /> */}
       <section className="list">
         <div className="headings">
           <ul id='films'>

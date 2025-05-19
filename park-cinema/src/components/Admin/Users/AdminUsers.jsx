@@ -36,6 +36,7 @@ const AdminUsers = () => {
                                 <th>Ad</th>
                                 <th>Soyad</th>
                                 <th>Email</th>
+                                <th>Şifrə</th>
                                 <th>Telefon</th>
                                 <th>Doğum tarixi</th>
                                 <th>Cins</th>
@@ -48,6 +49,7 @@ const AdminUsers = () => {
                                     <td>{user.name}</td>
                                     <td>{user.surname}</td>
                                     <td>{user.email}</td>
+                                    <td>{user.password}</td>
                                     <td>{user.number}</td>
                                     <td>{user.date}</td>
                                     <td>{user.gender}</td>

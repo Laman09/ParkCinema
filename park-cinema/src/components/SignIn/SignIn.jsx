@@ -26,7 +26,7 @@ const SignIn = () => {
             if (matchedUser) {
                 setLoading(false);
                 localStorage.setItem("currentUser", JSON.stringify(matchedUser));
-                window.location.href = "/";
+                window.location.href = "/az/profile";
             } else {
                 setLoading(false);
                 setError("");

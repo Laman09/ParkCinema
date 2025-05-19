@@ -12,7 +12,7 @@ const BuyTickets = () => {
     const [phone, setPhone] = useState('');
     const [agreed, setAgreed] = useState(false);
 
-    const user = JSON.parse(localStorage.getItem('user'));
+    const user = JSON.parse(localStorage.getItem('currentUser'));
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,7 +22,7 @@ const BuyTickets = () => {
             return;
         }
 
-        if (!user || email !== user.email || phone !== user.phone) {
+        if (!user || email !== user.email || phone !== user.number) {
             alert("Email və ya nömrə qeydiyyat məlumatlarınızla uyğun gəlmir.");
             return;
         }
