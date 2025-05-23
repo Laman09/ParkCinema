@@ -17,7 +17,7 @@ const AdminPanel = () => {
                 </nav>
                 <Outlet />
                 <div className="button">
-                    <a href="/az">
+                    <a href="/">
                         <button>Əsas səhifəyə qayıt</button>
                     </a>
                 </div>

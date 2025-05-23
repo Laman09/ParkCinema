@@ -7,7 +7,7 @@ const NotFound = () => {
             <div className="containerError">
                 <h1>404</h1>
                 <h3>Bu səhifə tapılmadı.</h3>
-                <a href="/az">
+                <a href="/">
                     <button>
                         Ana səhifəyə qayıt
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
